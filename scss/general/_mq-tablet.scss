@@ -1,0 +1,177 @@
+// Import variables
+@import "../utilidades/variables";
+// Import mixin
+@import "../utilidades/mixin";
+
+/* HEADER TABLET */
+/* HEADER TABLET */
+/* HEADER TABLET */
+
+@media (min-width: 600px){
+    header{
+        width: 100%;
+        height: auto;
+        background-color: $color-hf;
+    
+        .left--content{
+            @include flex;
+            margin: 0;
+            padding: 5px;
+            gap: 10px;
+            
+    
+            img{
+                @include img-header;
+                padding: 0px;
+            }
+    
+            a{
+                @include a-header;
+                text-align: center;
+                font-size: 3rem;
+            }
+        }
+    
+        .right--content{
+            @include flex;
+            padding: 0;
+            margin: 0;
+    
+            li{
+                @include flex;
+                list-style: none;
+                font-weight: bold;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                padding: 2px 4px;
+                margin: 2px;
+    
+                a{
+                    @include a-header;
+                    font-size: 1.4rem;
+                    padding: 0px 30px;
+                }
+            }
+        }
+            .search-container{
+                display: flex;
+                justify-content: center;
+                width: auto;
+                margin-top: 0;
+            }
+    
+            .custom-navbar{
+                background-color: $color-hf;
+            }
+    }
+}
+
+
+/* PAGINA SERVICIOS TABLET */
+/* PAGINA SERVICIOS TABLET */
+/* PAGINA SERVICIOS TABLET */
+@media (min-width: 600px){
+    .intro-servicios{
+        max-width: 90%; /*Limita el ancho total del contenedor */
+        margin: 0 auto; /*Centra el contenedor*/
+        padding: 20px;
+    
+        h1{
+            @include titulos;
+            font-size: 30px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            text-align: center;
+            margin-bottom: 20px;
+            padding-bottom: 30px;
+        }
+    }
+    
+    .servicios-item{
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        gap: 20px;
+    
+        img{
+            width: 100%;
+            min-width: 600px;
+            height: auto;
+            border-radius: 25px;
+            padding-bottom: 30px;
+        }
+    
+        h2{
+            text-align: center;
+            font-size: 22px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+        }
+    }
+    
+    .servicio{
+        @include flex;
+        flex-direction: column;
+    }
+}
+
+/* PAGINA PROYECTO TABLET*/
+/* PAGINA PROYECTO TABLET*/
+/* PAGINA PROYECTO TABLET*/
+@media (min-width: 600px){
+    .video-proyecto{ 
+        h1{
+            @include titulos;
+            font-size: 3rem;
+        }
+        video{
+            padding: 30px 0px;
+            width: 95%;
+            height: auto;
+            border-radius: 10px;
+        }
+    }
+}
+
+/* PAGINA CONTACTO TABLET */
+/* PAGINA CONTACTO TABLET */
+/* PAGINA CONTACTO TABLET */
+@media (min-width: 600px){
+    .intro-contacto{
+        all: unset;
+        font-weight: bold !important;
+        text-align: center !important;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
+        h1{
+            @include titulos;
+            padding-top: 20px;
+            padding-bottom: 35px;
+            font-size: 30px;
+        }
+        h2{
+            @include titulos;
+            padding-top: 160px;
+            padding-bottom: 30px;
+        }
+    }
+    
+    .casillas{
+        label{
+            display: block; /* Hace que el label ocupe una línea completa */
+            margin-bottom: 30px; /* Espacio entre el label y el campo de entrada */
+            margin: 0;
+            font-size: 1.5rem;
+            padding: 15px;
+        }
+        input, textarea{
+            width: 400px; /* Asegura que los inputs y textarea ocupen todo el ancho */
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+    }
+    
+    .redes{
+        img{
+            all: unset;
+            width: 65px;
+            height: 65px;
+            padding: 0px 20px 15px 30px;
+        }
+    }
+}

@@ -1,0 +1,234 @@
+// Import variables
+@import "../utilidades/variables";
+// Import mixin
+@import "../utilidades/mixin";
+
+/* HEADER DESKTOP */
+/* HEADER DESKTOP */
+/* HEADER DESKTOP */
+
+@media (min-width: 1024px){
+    header{
+        width: 100%;
+        height: auto;
+        background-color: $color-hf;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+
+        .left--content{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            img{
+                @include img-header;
+                padding: 5px 15px 5px 15px;
+            }
+
+            a{
+                @include a-header;
+                font-size: 3rem;
+            }
+        }
+
+        .right--content{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: right;
+            align-items: center;
+
+            li{
+                list-style: none;
+                font-weight: bold;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                text-align: center;
+                padding: 0;
+
+                a{
+                    text-decoration: none;
+                    color: $color-fhf;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+
+        .parent--container{
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
+
+/* INDEX DESKTOP */
+/* INDEX DESKTOP */
+/* INDEX DESKTOP */
+@media (min-width: 1024px){
+    .obras--item{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .obras--item p{
+        text-align: left;
+        width: 65%;
+    }
+}
+
+/* PAGINA NOSOTROS DESKTOP */
+/* PAGINA NOSOTROS DESKTOP */
+/* PAGINA NOSOTROS DESKTOP */
+
+@media (min-width: 1024px){
+    .intro-nosotros img{
+        width: 100%;
+        height: auto;
+    }
+    
+    .intro-nosotros h1{
+        @include titulos;
+        font-size: 30px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    
+    .intro-nosotros h2{
+        @include titulos;
+        font-size: 23px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    
+    .intro-nosotros {
+        text-align: center;
+    }
+    }
+
+/* PAGINA SERVICIOS DESKTOP */
+/* PAGINA SERVICIOS DESKTOP */
+/* PAGINA SERVICIOS DESKTOP */
+
+@media (min-width: 1024px){
+    .intro-servicios{
+        max-width: 90%; /*Limita el ancho total del contenedor */
+        margin: 0 auto; /*Centra el contenedor*/
+        padding: 20px;
+        h1{
+            @include titulos;
+            padding: 0;
+            margin: 0;
+            font-size: 30px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            text-align: center;
+            }
+    }
+    
+    .servicios-item{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        gap: 20px;
+
+        img{
+            width: 100%;
+            max-width: 450px;
+            aspect-ratio: 2; /* Mantiene determinada proporción */
+            object-fit: cover; /* Ajusta las imágenes sin distorsión */
+            border-radius: 25px;
+            }
+
+        h2{
+            @include titulos;
+            padding-bottom: 10px;
+            padding-top: 30px;
+            text-align: center;
+            font-size: 22px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            }
+    }
+    
+    .servicio {
+        display: flex;
+        flex-direction: column;
+        align-items: center;  
+        justify-content: center; 
+        }
+    }
+
+/* PAGINA PROYECTO DESKTOP */
+/* PAGINA PROYECTO DESKTOP */
+/* PAGINA PROYECTO DESKTOP */
+@media (min-width: 1024px){
+    .intro-proyecto{
+        h1{
+            @include titulos;
+            font-size: 30px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            margin-bottom: 0;
+            padding: 20px 0px 0px 0px;
+        }
+        p{
+            text-align: center;
+            font-size: 18px;
+            width: 80%;
+            margin: auto; /*coloca automáticamente el margen izquierdo y derecho de forma equitativa, lo que resulta en un centrado horizontal.*/
+            padding-top: 0;
+            padding-bottom: 30px;
+        }
+    }
+
+    .video-proyecto{
+        @include flex;
+        align-items: center;
+        video{
+            width: 50%;
+            height: auto;
+            border-radius: 10px;
+        }
+    }
+}
+
+/* PAGINA CONTACTO DESKTOP */
+/* PAGINA CONTACTO DESKTOP */
+/* PAGINA CONTACTO DESKTOP */
+@media (min-width: 1024px){
+    .intro-contacto{
+        all: unset;
+        font-weight: bold !important;
+        text-align: center !important;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
+        h1{
+            @include titulos;
+            padding-top: 20px;
+            padding-bottom: 0;
+            font-size: 30px;
+        }
+        h2{
+            @include titulos;
+            padding-top: 10px;
+        }
+    }
+
+    .casillas{
+        label{
+            display: block; /* Hace que el label ocupe una línea completa */
+            margin-bottom: 10px; /* Espacio entre el label y el campo de entrada */
+            margin: 0;
+            padding: 5px;
+        }
+        input, textarea{
+            width: 200px; /* Asegura que los inputs y textarea ocupen todo el ancho */
+            margin-bottom: 10px;
+            padding: 2px;
+        }
+    }
+
+    .redes{
+        img{
+            all: unset;
+            width: 35px;
+            height: 35px;
+            padding: 0px 20px 15px 30px;
+        }
+    }
+}

@@ -1,0 +1,35 @@
+//mixin con parametros
+//@mixin grid ($grid, $column, $grow){
+//    display: grid
+//    grid-template-columns: $column;
+//    grid-template-rows: $row;
+//}
+
+//mixin sin parametros
+@mixin flex{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+@mixin a-header{
+    text-decoration: none;
+    color: $color-fhf;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+@mixin img-header{
+    width: auto;
+    height: 50px;
+    max-width: 100%;
+}
+
+@mixin portada{
+    width: 100%;
+    height: auto;
+}
+
+@mixin titulos{
+    text-align: center;
+    font-weight: bold;
+}

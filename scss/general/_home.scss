@@ -1,0 +1,300 @@
+// Import variables
+@import "../utilidades/variables";
+// Import mixin
+@import "../utilidades/mixin";
+
+
+/* HEADER MOBILE */
+/* HEADER MOBILE */
+/* HEADER MOBILE */
+header{
+    width: 100%;
+    height: auto;
+    background-color: $color-hf;
+
+    .left--content{
+        @include flex;
+        margin: 0;
+        padding: 5px;
+        gap: 10px;
+        
+
+        img{
+            @include img-header;
+            padding: 0px;
+        }
+
+        a{
+            @include a-header;
+            text-align: center;
+            font-size: 3rem;
+        }
+    }
+
+    .right--content{
+        @include flex;
+        padding: 0;
+        margin: 0;
+
+        li{
+            @include flex;
+            list-style: none;
+            font-weight: bold;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            padding: 2px 4px;
+            margin: 2px;
+
+            a{
+                @include a-header;
+            }
+        }
+    }
+        .search-container{
+            display: flex;
+            justify-content: center;
+            width: auto;
+            margin-top: 0;
+        }
+
+        .custom-navbar{
+            background-color: $color-hf;
+        }
+}
+
+/* INDEX MOBILE */
+/* INDEX MOBILE */
+/* INDEX MOBILE */
+
+.portada{
+    img{
+        @include portada;
+    }
+}
+
+.intro{
+    h1{
+        margin: 0;
+        @include titulos;
+        padding-top: 30px;
+        font-size: 35px;
+    }
+
+    p{
+        width: 90%;
+        padding-top: 15px;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 20px;
+    }
+}
+
+.obras{
+    text-align: center;
+    h2{
+        @include titulos;
+        font-size: 30px;
+        padding: 30px 0px 10px 15px;
+    }
+    p{
+        display: inline-block;
+        margin: 0px 15px;
+        margin-bottom: 20px;
+        font-size: 18px;
+        width: auto;
+        text-align: center;
+        padding: 0px 0px 3px 0px;
+    }
+    img{
+        width: 390px;
+        height: auto;
+        padding: 0px 15px 15px 15px;
+    }
+}
+
+/* FOOTER MOBILE */
+/* FOOTER MOBILE */
+/* FOOTER MOBILE */
+footer{
+    padding: 15px;
+    display: flex;
+    background-color: $color-hf;
+    justify-content: space-between;
+    align-items: center !important;
+    height: auto;
+    
+    .footer-content{
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer--left{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        text-decoration: none; 
+        color: $color-fhf; 
+        font-size: 15px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        padding: 0px 15px;
+    }
+
+    .footer--right{
+        margin: 0;
+        padding: 0;
+        @include flex;
+
+        a{
+            text-decoration: none;
+            color: $color-fhf;
+            font-size: 15px;
+            @include titulos;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            padding: 0px 15px;
+        }
+    }
+}
+
+/* PAGINA NOSOTROS MOBILE*/
+/* PAGINA NOSOTROS MOBILE*/
+/* PAGINA NOSOTROS MOBILE*/
+
+.intro-nosotros{
+    text-align: center;
+    p{
+        font-size: 20px; 
+        padding-bottom: 20px;
+    }
+
+    img{
+        @include portada;
+    }
+
+    h1{
+        @include titulos;
+        padding-top: 20px;
+        font-size: 30px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    h2{
+        @include titulos;
+        font-size: 25px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+}
+
+/* PAGINA SERVICIOS MOBILE */
+/* PAGINA SERVICIOS MOBILE */
+/* PAGINA SERVICIOS MOBILE */
+.intro-servicios{
+    max-width: 90%; /*Limita el ancho total del contenedor */
+    margin: 0 auto; /*Centra el contenedor*/
+    padding: 20px;
+
+    h1{
+        font-size: 30px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+
+.servicios-item{
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    gap: 20px;
+
+    img{
+        width: 100%;
+        max-width: 450px;
+        aspect-ratio: 2; /* Mantiene determinada proporción */
+        object-fit: cover; /* Ajusta las imágenes sin distorsión */
+        border-radius: 25px
+    }
+
+    h2{
+        text-align: center;
+        font-size: 22px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+    }
+}
+
+.servicio{
+    @include flex;
+    flex-direction: column;
+}
+
+/* PAGINA PROYECTO MOBILE */
+/* PAGINA PROYECTO MOBILE */
+/* PAGINA PROYECTO MOBILE */
+
+.intro-proyecto{
+    h1{
+        @include titulos;
+        font-size: 30px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        margin-bottom: 0;
+        padding-top: 20px;
+        padding-bottom: 5px;
+    }
+
+    p{
+        text-align: center;
+        font-size: 22px;
+        width: 95%;
+        margin: auto; /*coloca automáticamente el margen izquierdo y derecho de forma equitativa, lo que resulta en un centrado horizontal.*/
+        padding: 25px;
+    }
+}
+
+.video-proyecto{
+    @include flex;
+    align-items: center;
+    video{
+        width: 95%;
+        height: auto;
+        border-radius: 10px;
+    }
+}
+
+/* PAGINA CONTACTO MOBILE */
+/* PAGINA CONTACTO MOBILE */
+/* PAGINA CONTACTO MOBILE */
+.intro-contacto{
+    all: unset;
+    font-weight: bold !important;
+    text-align: center !important;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
+    h1{
+        @include titulos;
+        padding-top: 20px;
+        font-size: 30px;
+    }
+    h2{
+        @include titulos;
+        padding-top: 30px;
+    }
+}
+
+.casillas{
+    label{
+        display: block; /* Hace que el label ocupe una línea completa */
+        margin-bottom: 10px; /* Espacio entre el label y el campo de entrada */
+        margin: 0;
+        padding: 5px;
+    }
+    input, textarea{
+        width: 200px; /* Asegura que los inputs y textarea ocupen todo el ancho */
+        margin-bottom: 10px;
+    }
+}
+
+.redes{
+    img{
+        all: unset;
+        width: 35px;
+        height: 35px;
+        padding: 0px 20px 15px 30px;
+    }
+}

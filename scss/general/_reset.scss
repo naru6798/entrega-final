@@ -1,0 +1,25 @@
+// Import variables
+@import "../utilidades/variables";
+
+/* Rese */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+    all: unset;
+    display: flex;
+    flex-direction: column;
+}
+
+html, body{
+    height: 100%;
+    margin: 0;
+}
+
+main{
+    flex: 1;
+}
